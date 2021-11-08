@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<h1 [id] = "id" [style.color]="fontcolor" >{{message}}</h1>
+
+<ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+  Click me
+</ion-button>
+</ion-content>
