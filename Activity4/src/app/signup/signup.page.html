@@ -1,0 +1,53 @@
+<ion-header>
+</ion-header>
+<ion-content>
+  <div class=" container gradient ">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="card-center">
+          <ion-card color="light" class="card-border ion-padding ion-no-margin card-size">
+            <ion-card-header class=" ion-text-center ">
+              <ion-card-title>
+                <h1>
+                  Sign Up
+                </h1>
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+            <form [formGroup]="signupForm" (ngSubmit)="signin()">
+              <ion-item color="light">
+                <ion-label position="floating">Firstname</ion-label>
+                <ion-input formControlName="firstname" class="ion-input-placeholder"   type="text" clearInput>
+                </ion-input>
+              </ion-item>
+              
+              <ion-item color="light">
+                <ion-label position="floating">Lastname</ion-label>
+                <ion-input formControlName="lastname" class="ion-input-placeholder"  type="text" clearInput>
+                </ion-input>
+              </ion-item>
+           
+              <ion-item color="light">
+                <ion-label position="floating">Email</ion-label>
+                <ion-input formControlName="email" class="ion-input-placeholder" type="email" clearInput>
+                </ion-input>
+              </ion-item>
+             
+              <ion-item color="light">
+                <ion-label position="floating">Password</ion-label>
+                <ion-input formControlName="password" class="ion-input-placeholder"  type="password" clearInput>
+                </ion-input>
+              </ion-item>
+            
+             
+              <ion-button [routerLink]="['/login']" type="submit" class="button-gradient ion-button ion-margin-top " expand="block" shape="round">
+                SIGN UP
+              </ion-button>
+            </form>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

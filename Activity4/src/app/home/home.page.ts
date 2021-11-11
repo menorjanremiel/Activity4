@@ -11,6 +11,10 @@ export class HomePage {
   message = 'Hello World'
   id = '1';
   fontcolor = 'blue';
+  login() {
+  console.log("hello")
+  }
   constructor() {}
 
 }
+

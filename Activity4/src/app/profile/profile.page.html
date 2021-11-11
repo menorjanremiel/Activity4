@@ -1,0 +1,56 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <div class=" container gradient ">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="card-center">
+          <ion-card *ngFor="let profile of profile"color="light" class="card-border ion-padding ion-no-margin card-size ">
+            <ion-card-header class="card-header">
+             <div class="user-profile-pic">
+                <img  src="assets\image\me.png" />
+             </div>
+
+             
+              <ion-label class="user-name"> 
+                
+                <ion-card-title>{{profile.firstname}} {{profile.lastname}}</ion-card-title>
+                <ion-card-subtitle>({{profile.nickname}})</ion-card-subtitle>
+              </ion-label>
+            </ion-card-header>
+            <ion-card-content >
+              <ion-label class="user-about">
+                <ion-item color="light">
+                  <ion-icon class=" ion-margin-end" name="school"></ion-icon>
+                  Studies at
+                  <strong class="space">{{profile.school}}</strong>
+                </ion-item>
+                <ion-item color="light">
+                  <ion-icon class=" ion-margin-end" name="home"></ion-icon>
+                  Lives in
+                  <strong class="space">{{profile.address}}</strong>
+                </ion-item>
+                 <ion-item color="light">
+                  <ion-icon class=" ion-margin-end" name="call"></ion-icon>
+                  Contact
+                  <strong class="space">{{profile.contact}}</strong>
+                </ion-item>
+                <ion-item color="light">
+                  <ion-icon class=" ion-margin-end" name="mail"></ion-icon>
+                  Email
+                  <strong class="space">{{profile.email}}</strong>
+                </ion-item>
+              </ion-label>
+            </ion-card-content>
+            <ion-button [routerLink]="['/login']" expand="block" fill="clear" shape="round">
+              LOG OUT
+            </ion-button>
+          </ion-card>
+        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
